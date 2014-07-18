@@ -92,14 +92,10 @@ NeoBundle 'jmcantrell/vim-diffchanges'
 NeoBundle 'kshenoy/vim-signature'
 
 " Trim
-NeoBundle 'bronson/vim-trailing-whitespace'
-" clean up trailing whitespace
-map <Leader>c :FixWhitespace<cr>
-" Auto trail white space before write
-" au BufWritePre * :FixWhitespace
-au FocusLost * :silent! wall
-" compress excess whitespace on current line
-" map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>
+NeoBundle 'ntpeters/vim-better-whitespace'
+" " clean up trailing whitespace
+map <leader>c :StripWhitespace<cr>
+let g:better_whitespace_filetypes_blacklist = ['help', 'gitcommit', 'unite', 'vimfiler']
 
 " Bubbling lines
 NeoBundle 'tpope/vim-unimpaired'
