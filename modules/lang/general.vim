@@ -26,7 +26,7 @@ NeoBundle 'thinca/vim-textobj-comment'
 
 " folding {{{
 
-set foldlevelstart=0
+set foldlevelstart=1
 set foldmethod=syntax
 
 " Space to toggle folds.
