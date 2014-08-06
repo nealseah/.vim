@@ -95,7 +95,7 @@ NeoBundle 'kshenoy/vim-signature'
 NeoBundle 'ntpeters/vim-better-whitespace'
 " " clean up trailing whitespace
 map <leader>c :StripWhitespace<cr>
-let g:better_whitespace_filetypes_blacklist = ['help', 'gitcommit', 'unite', 'vimfiler']
+let g:better_whitespace_filetypes_blacklist = ['help', 'git', 'gitcommit', 'unite', 'vimfiler']
 
 " Bubbling lines
 NeoBundle 'tpope/vim-unimpaired'
