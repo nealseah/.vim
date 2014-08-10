@@ -18,6 +18,11 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ '\.git/',
       \ ], '\|'))
 
+call unite#custom_source('buffer',
+      \ 'ignore_pattern', join([
+      \ 'vimfiler',
+      \ ], '\|'))
+
 " only match filename
 call unite#custom#source(
       \ 'buffer,file_rec/async,file_rec', 'matchers',
