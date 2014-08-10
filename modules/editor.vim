@@ -52,8 +52,6 @@ NeoBundle "nelstrom/vim-textobj-rubyblock"
 NeoBundle "thinca/vim-textobj-function-javascript"
 " }}}
 
-NeoBundle 'drmikehenry/vim-fixkey'
-
 " Disabling auto indent temporarily to paste
 " NeoBundle 'ConradIrwin/vim-bracketed-paste'
 
