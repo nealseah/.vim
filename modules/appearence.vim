@@ -1,5 +1,11 @@
-NeoBundle 'w0ng/vim-hybrid'
-colorscheme hybrid
+"UniteRequired
+NeoBundle 'ujihisa/unite-colorscheme'
+" NeoBundle 'flazz/vim-colorschemes'
+" NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'Lokaltog/vim-distinguished'
+
+colorscheme distinguished
 
 NeoBundle "itchyny/lightline.vim"
 " NeoBundle "itchyny/lightline-powerful"
