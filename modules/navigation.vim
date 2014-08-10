@@ -52,9 +52,10 @@ endfunction
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 NeoBundle 'Shougo/vimfiler.vim'
-no <F1> :VimFiler -buffer-name=explorer -split -simple -winwidth=30 -toggle -no-quit<CR>
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_enable_auto_cd = 1
-autocmd VimEnter * if !argc() | VimFiler | endif
+command Vf VimFiler -buffer-name=explorer -split -simple -winwidth=25 -toggle -no-quit
+autocmd FileType vimfiler nunmap <buffer> <C-l>
+autocmd FileType vimfiler nmap <buffer> <C-R>  <Plug>(vimfiler_redraw_screen)
+no <F1> :Vf<CR>
 autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
 let g:vimfiler_ignore_pattern = '^\%(.git\|.DS_Store\|node_modules\|bower_components\)$'
