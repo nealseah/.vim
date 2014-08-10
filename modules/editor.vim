@@ -69,14 +69,12 @@ nmap <Leader>a <Plug>(EasyAlign)
 set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Yank
-NeoBundle 'vim-scripts/YankRing.vim'
-let g:yankring_replace_n_pkey = '<leader>['
-let g:yankring_replace_n_nkey = '<leader>]'
-let g:yankring_history_dir = '~/.vim/.tmp/'
-nm <leader>y :YRShow<cr>
-" NeoBundle 'maxbrunsfeld/vim-yankstack'
-" make Y consistent with C and D. See :help Y.
-" nn Y y$
+nn Y y$
+"UniteRequired
+let g:unite_source_history_yank_enable = 1
+let g:unite_source_history_yank_save_clipboard = 1
+let g:unite_source_history_yank_file=$HOME.'/.vim/.tmp/yankring'
+nn <leader>y :<C-u>Unite history/yank<CR>
 
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
