@@ -21,8 +21,6 @@ set nobackup
 set directory=~/.vim/.tmp/swap
 set noswapfile
 
-set number
-
 set cursorline
 
 " text-object {{{
