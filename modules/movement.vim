@@ -28,4 +28,3 @@ cno <c-d> <del>
 
 NeoBundle "skwp/vim-easymotion"
 NeoBundle "bkad/CamelCaseMotion"
-
