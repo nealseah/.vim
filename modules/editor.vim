@@ -63,7 +63,6 @@ vmap <Enter> <Plug>(EasyAlign)
 "}}}
 
 " Start interactive EasyAlign with a Vim movement
-nmap <Leader>a <Plug>(EasyAlign)
 set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Yank
