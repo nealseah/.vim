@@ -4,7 +4,6 @@
 
 nmap <leader>s :w<CR>
 nmap <leader>q :q!<CR>
-nmap <leader>qa :qa!<CR>
 nmap <leader>x ZZ
 
 " undo files
