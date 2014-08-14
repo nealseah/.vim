@@ -22,6 +22,8 @@ set noswapfile
 
 set cursorline
 
+NeoBundle 'drn/zoomwin-vim'
+
 " text-object {{{
 NeoBundle "kana/vim-textobj-user"
 " f{char}
