@@ -15,8 +15,8 @@ endif
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --ignore ".hg" --ignore ".svn" --ignore ".git" --column'
 let g:unite_source_grep_recursive_opt = ''
 
-nn <leader>a :Unite grep:.<cr>
-nn K :Unite -no-empty -auto-highlight grep:.<cr><c-r><c-w><cr>
+nn <leader>/ :<C-u>Unite -no-empty -auto-highlight grep:.<cr>
+nn K :<C-u>Unite -no-empty -auto-highlight grep:.<cr><c-r><c-w><cr>
 
 " Dash Searching"
 NeoBundle "rizzatti/funcoo.vim.git"
