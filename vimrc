@@ -14,6 +14,7 @@ ru! modules/editor.vim
 ru! modules/search.vim
 ru! modules/appearence.vim
 ru! modules/git.vim
+ru! modules/tmux.vim
 ru! modules/lang/*.vim
 
 " If there are uninstalled bundles found on startup,
