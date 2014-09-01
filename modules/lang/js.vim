@@ -10,3 +10,6 @@ NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'claco/jasmine.vim'
 " NeoBundle 'BrunoGrasselli/jasmine-snippets'
 " NeoBundle 'vim-scripts/Jasmine-snippets-for-snipMate'
+
+"angular
+NeoBundle 'burnettk/vim-angular'
