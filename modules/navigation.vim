@@ -1,3 +1,12 @@
+set wildignore+=.DS_Store
+set wildignore+=.git/
+set wildignore+=node_modules/
+set wildignore+=bower_components/
+set wildignore+=.bower-cache/
+set wildignore+=.bower-registry/
+set wildignore+=.sass-cache/
+set wildignore+=.vagrant/
+
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -13,11 +22,7 @@ let g:unite_split_rule = "botright"
 let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 10
 
-call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
-      \ 'ignore_pattern', join([
-      \ '\.git/',
-      \ ], '\|'))
-
+call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep', 'ignore_pattern', escape(substitute(join(split(&wildignore, ","), '\|'), '**/\?', "", "g"), '.'))
 call unite#custom_source('buffer',
       \ 'ignore_pattern', join([
       \ 'vimfiler',
@@ -64,4 +69,6 @@ no <F1> :call ToggleVimFilerExplorer()<CR><CR>
 autocmd FileType vimfiler nunmap <buffer> <C-l>
 autocmd FileType vimfiler nmap <buffer> <C-R>  <Plug>(vimfiler_redraw_screen)
 autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
-let g:vimfiler_ignore_pattern = '^\%(.git\|.DS_Store\|node_modules\|bower_components\)$'
+
+let g:vimfiler_ignore_pattern = '^\%(.git\|.DS_Store|.sass-cache\|bin\|node_modules\|bower_components\)$'
+" let g:vimfiler_ignore_pattern = '^\%('.substitute(join(split(&wildignore, ","), '\|'), '**/\?', "", "g").')$'
