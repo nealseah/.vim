@@ -5,8 +5,8 @@ set smartcase
 nm <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " sane regexes
-nn / /\v
-vn / /\v
+" nn / /\v
+" vn / /\v
 
 if executable('ag')
   let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --ignore ".hg" --ignore ".svn" --ignore ".git" --hidden -g ""'
