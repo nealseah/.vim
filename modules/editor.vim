@@ -113,3 +113,6 @@ nnoremap vv `[V`]
   nnoremap <S-Left> <c-w>H
   nnoremap <S-Right> <c-w>L
 " }}}
+
+NeoBundle 'MarcWeber/vim-addon-local-vimrc'
+let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
