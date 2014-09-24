@@ -28,7 +28,6 @@ NeoBundle "thinca/vim-textobj-between"
 "NeoBundle "beloglazov/vim-textobj-punctuation"
 " b
 NeoBundle "rhysd/vim-textobj-anyblock"
-
 " e
 NeoBundle "kana/vim-textobj-entire"
 " q
@@ -39,12 +38,6 @@ NeoBundle "beloglazov/vim-textobj-quotes"
 NeoBundle "reedes/vim-textobj-sentence"
 " _
 NeoBundle "lucapette/vim-textobj-underscore"
-" da
-NeoBundle "kana/vim-textobj-datetime"
-
-NeoBundle "bootleq/vim-textobj-rubysymbol"
-NeoBundle "nelstrom/vim-textobj-rubyblock"
-NeoBundle "thinca/vim-textobj-function-javascript"
 " }}}
 
 " Disabling auto indent temporarily to paste
