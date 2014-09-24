@@ -35,6 +35,9 @@ call unite#custom#source(
 call unite#filters#sorter_default#use(['sorter_rank'])
 nn <C-p> :<C-u>Unite -start-insert -buffer-name=files buffer file_rec/async:!<cr>
 nn <C-e> :<C-u>Unite -start-insert buffer<cr>
+nn <leader>m :<C-u>Unite -start-insert mapping<cr>
+NeoBundle 'Shougo/neomru.vim'
+nn <leader>n :<C-u>Unite -start-insert file_mru<cr>
 
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
