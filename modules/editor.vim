@@ -12,7 +12,7 @@ set undofile
 set backupdir=~/.vim/.tmp/backup
 set nobackup
 
-"p swap files
+" swap files
 set directory=~/.vim/.tmp/swap
 set noswapfile
 
