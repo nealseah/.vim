@@ -1,7 +1,3 @@
-" ino jk <esc>
-" ino kj <esc>
-" ino <esc> <nop>
-
 nmap <leader>s :w<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>x ZZ
