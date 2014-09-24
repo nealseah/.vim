@@ -74,7 +74,6 @@ nn <leader>y :<C-u>Unite history/yank<CR>
 
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'Raimondi/delimitMate'
 
