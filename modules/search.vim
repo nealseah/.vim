@@ -22,3 +22,15 @@ nn K :<C-u>Unite -no-empty -auto-highlight grep:.<cr><c-r><c-w><cr>
 NeoBundle "rizzatti/funcoo.vim.git"
 NeoBundle "rizzatti/dash.vim.git"
 nm <F7> <Plug>DashSearch
+
+NeoBundle 'haya14busa/incsearch.vim'
+nmap /  <Plug>(incsearch-forward)
+nmap ?  <Plug>(incsearch-backward)
+nmap g/ <Plug>(incsearch-stay)
+let g:incsearch#auto_nohlsearch = 1
+nmap n  <Plug>(incsearch-nohl-n)
+nmap N  <Plug>(incsearch-nohl-N)
+nmap *  <Plug>(incsearch-nohl-*)
+nmap #  <Plug>(incsearch-nohl-#)
+nmap g* <Plug>(incsearch-nohl-g*)
+nmap g# <Plug>(incsearch-nohl-g#)
