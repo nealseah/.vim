@@ -34,3 +34,5 @@ nmap *  <Plug>(incsearch-nohl-*)
 nmap #  <Plug>(incsearch-nohl-#)
 nmap g* <Plug>(incsearch-nohl-g*)
 nmap g# <Plug>(incsearch-nohl-g#)
+
+NeoBundle 'bronson/vim-visual-star-search'
