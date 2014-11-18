@@ -64,7 +64,7 @@ nn <leader>y :<C-u>Unite history/yank<CR>
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tommcdo/vim-exchange'
-NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'cohama/lexima.vim'
 
 " Input Method
 NeoBundle 'ybian/smartim'
