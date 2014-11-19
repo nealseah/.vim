@@ -9,6 +9,8 @@
 " let g:indentLine_color_gui = '#A4E57E'
 
 NeoBundle 'AndrewRadev/splitjoin.vim'
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
 NeoBundle 'tomtom/tcomment_vim'
 let g:tcommentTextObjectInlineComment=''
 NeoBundle 'tpope/vim-endwise'
@@ -41,6 +43,9 @@ vn <space> za
 nn z<space> zR
 vn z<space> zR
 
+NeoBundle 'Konfekt/FastFold'
+let g:fastfold_togglehook = 1
+let g:fastfold_mapsuffixes = ['x','X']
 " }}}
 
 " Make zO recursively open whatever top level fold we're in, no matter where the
@@ -56,3 +61,5 @@ NeoBundle 'tpope/vim-abolish'
 
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tsukkee/unite-tag'
+
+set fdm=syntax

@@ -6,6 +6,18 @@ set wildignore+=.bower-cache/
 set wildignore+=.bower-registry/
 set wildignore+=.sass-cache/
 set wildignore+=.vagrant/
+set wildignore+=vendor/
+set wildignore+=storage/
+set wildignore+=.png$
+set wildignore+=.jpg$
+set wildignore+=.ttf$
+set wildignore+=.woff$
+set wildignore+=.eot$
+set wildignore+=.svg$
+set wildignore+=package/
+set wildignore+=migration/
+set wildignore+=.min.js
+set wildignore+=.min.css
 
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
@@ -23,6 +35,7 @@ let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 10
 
 call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep', 'ignore_pattern', escape(substitute(join(split(&wildignore, ","), '\|'), '**/\?', "", "g"), '.'))
+call unite#custom#source('file_rec,file_rec/async,grep', 'max_candidates', 0)
 call unite#custom_source('buffer',
       \ 'ignore_pattern', join([
       \ 'vimfiler',
@@ -38,7 +51,8 @@ call unite#custom#source(
 
 " call unite#filters#matcher_default#use(['matcher_fuzzy', 'matcher_hide_hidden_files'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-nn <C-p> :<C-u>Unite -start-insert -buffer-name=files buffer file_rec/async:!<cr>
+" nn <C-p> :<C-u>Unite -start-insert -buffer-name=files buffer file_rec/async:!<cr>
+nn <C-p> :<C-u>Unite -start-insert -buffer-name=files buffer file_rec/async:<cr>
 nn <C-e> :<C-u>Unite -start-insert buffer<cr>
 nn <leader>m :<C-u>Unite -start-insert mapping<cr>
 NeoBundle 'Shougo/neomru.vim'

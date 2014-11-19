@@ -1,8 +1,11 @@
 "UniteRequired
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'Lokaltog/vim-distinguished'
+" NeoBundle 'Lokaltog/vim-distinguished'
+NeoBundle 'tomasr/molokai'
 
-colorscheme distinguished
+" let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
 
 NeoBundle "itchyny/lightline.vim"
 let g:lightline = {

@@ -20,3 +20,4 @@ NeoBundle 'claco/jasmine.vim'
 NeoBundle 'burnettk/vim-angular'
 "ionic
 " let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute \"ion-nav-bar']
+NeoBundle 'moll/vim-node'
