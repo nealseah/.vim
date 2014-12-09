@@ -6,6 +6,11 @@ nn k gk
 nn H ^
 nn L g_
 
+NeoBundle 'geechrist/directionalWindowResizer'
+nn <silent> <down>  :call DownHorizontal()<CR>
+nn <silent> <up>    :call UpHorizontal()<CR>
+nn <silent> <right> :call RightVertical()<CR>
+nn <silent> <left>  :call LeftVertical()<CR>
 " move Cross Windows {{{
 nn <silent> <c-l> <c-w>l
 nn <silent> <c-h> <c-w>h

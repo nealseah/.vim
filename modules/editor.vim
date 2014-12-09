@@ -89,19 +89,5 @@ vmap <C-Down> ]egv
 " select the lines which were just pasted
 nnoremap vv `[V`]
 
-" Window {{{
-  " buffer move mappings (arrow key)
-  nnoremap <Up> <c-w>+
-  nnoremap <Down> <c-w>-
-  nnoremap <Left> <c-w><
-  nnoremap <Right> <c-w>>
-
-  " buffer resizing mappings (shift + arrow key)
-  nnoremap <S-Up> <c-w>K
-  nnoremap <S-Down> <c-w>J
-  nnoremap <S-Left> <c-w>H
-  nnoremap <S-Right> <c-w>L
-" }}}
-
 NeoBundle 'MarcWeber/vim-addon-local-vimrc'
 let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
