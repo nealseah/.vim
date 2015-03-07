@@ -35,4 +35,7 @@ nmap #  <Plug>(incsearch-nohl-#)
 nmap g* <Plug>(incsearch-nohl-g*)
 nmap g# <Plug>(incsearch-nohl-g#)
 
-NeoBundle 'bronson/vim-visual-star-search'
+" NeoBundle 'bronson/vim-visual-star-search'
+NeoBundle 'haya14busa/vim-asterisk'
+map *  <Plug>(asterisk-z*)
+map #  <Plug>(asterisk-z#)
