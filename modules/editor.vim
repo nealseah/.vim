@@ -34,8 +34,8 @@ NeoBundle "kana/vim-textobj-entire"
 NeoBundle "beloglazov/vim-textobj-quotes"
 " c
 " NeoBundle "coderifous/textobj-word-column.vim"
-" s
-NeoBundle "reedes/vim-textobj-sentence"
+" l
+NeoBundle "kana/vim-textobj-line"
 " _
 NeoBundle "lucapette/vim-textobj-underscore"
 " }}}
