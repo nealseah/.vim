@@ -15,3 +15,6 @@ NeoBundle 'mattn/gist-vim'
 
 nn <leader>gs :Gst<cr>
 nn <leader>gb :Gblame<cr>
+nn <leader>gd :Gvdiff<cr>
+nn <leader>ga :Gwrite<cr>
+nn <leader>gc :Gcommit<cr>
