@@ -1,3 +1,5 @@
+NeoBundle 'wincent/terminus'
+
 nmap <leader>s :w<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>x ZZ
