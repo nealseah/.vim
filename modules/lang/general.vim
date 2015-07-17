@@ -38,10 +38,10 @@ set foldlevelstart=1
 set foldmethod=syntax
 
 " Space to toggle folds.
-nn <space> za
-vn <space> za
-nn z<space> zR
-vn z<space> zR
+nn <leader>a za
+vn <leader>a za
+nn <leader>r zR
+vn <leader>r zR
 
 NeoBundle 'Konfekt/FastFold'
 let g:fastfold_togglehook = 1
