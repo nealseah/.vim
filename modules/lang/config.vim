@@ -4,3 +4,5 @@ NeoBundle 'RobbieClarken/vim-haproxy'
 NeoBundle 'evanmiller/nginx-vim-syntax'
 "gradle
 au BufNewFile,BufRead *.gradle setf groovy
+"docker
+NeoBundle 'honza/dockerfile.vim'
