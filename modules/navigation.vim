@@ -30,7 +30,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 NeoBundle 'Shougo/unite.vim'
 let g:unite_enable_short_source_names = 1
-let g:unite_split_rule = "botright"
+" let g:unite_split_rule = "botright"
 let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 10
 
