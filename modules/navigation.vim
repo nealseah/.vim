@@ -79,7 +79,7 @@ let g:vimfiler_as_default_explorer = 1
 function! ToggleVimFilerExplorer()
   :VimFiler -buffer-name=explorer -split -simple -winwidth=25 -toggle -no-quit
 endfunction
-no <F1> :call ToggleVimFilerExplorer()<CR><CR>
+no <F2> :call ToggleVimFilerExplorer()<CR><CR>
 autocmd FileType vimfiler nunmap <buffer> <C-l>
 autocmd FileType vimfiler nmap <buffer> <C-R>  <Plug>(vimfiler_redraw_screen)
 autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
