@@ -38,6 +38,8 @@ NeoBundle "beloglazov/vim-textobj-quotes"
 NeoBundle "kana/vim-textobj-line"
 " _
 NeoBundle "lucapette/vim-textobj-underscore"
+" i
+NeoBundle "kana/vim-textobj-indent"
 " }}}
 
 " Disabling auto indent temporarily to paste
