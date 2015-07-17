@@ -1,16 +1,23 @@
-" Be iMproved
-set nocompatible
+" Defaults
+let mapleader="\<Space>"
+set timeoutlen=400
+" set hidden
+NeoBundle 'tpope/vim-sensible'
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/.bundle/neobundle.vim/
+ru! modules/movement.vim
+ru! modules/navigation.vim
+ru! modules/editor.vim
+ru! modules/search.vim
+ru! modules/appearence.vim
+ru! modules/git.vim
+ru! modules/tmux.vim
+ru! modules/lang/*.vim
+
+set foldmethod=indent
+au FileType vim setlocal foldmethod=marker
+au FileType help setlocal textwidth=78
+nn <leader>ev :sp ~/.vim/custom.vim<cr>
+if filereadable(expand("~/.vim/custom.vim"))
+  source ~/.vim/custom.vim
 endif
-
-call neobundle#begin(expand('~/.vim/.bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
+autocmd! BufWritePost *.vim source %
