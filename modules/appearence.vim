@@ -14,6 +14,7 @@ let g:lightline = {
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
+      \   'filename': 'FilenameStatusLine',
       \   'fugitive': 'MyFugitive'
       \ },
       \ 'mode_map': {
@@ -40,4 +41,18 @@ function! MyFugitive()
   catch
   endtry
   return ''
+endfunction
+
+function! ReadonlyStatusLine()
+    return &readonly ? '⭤' : ''
+endfunction
+
+function! FilenameStatusLine()
+  return ('' != ReadonlyStatusLine() ? ReadonlyStatusLine() . ' ' : '') .
+        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+        \  &ft == 'unite' ? unite#get_status_string() :
+        \  &ft == 'vimshell' ? vimshell#get_status_string() :
+        \  &ft == 'agsv' ? ags#get_status_string() :
+        \  &ft == 'agse' ? '' :
+        \ '' != expand('%:t') ? expand('%:t') : '[No Name]')
 endfunction
