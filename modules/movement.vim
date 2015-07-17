@@ -30,6 +30,3 @@ cno <c-e> <end>
 cno <c-a> <home>
 cno <c-d> <del>
 "}}}
-
-NeoBundle "skwp/vim-easymotion"
-NeoBundle "bkad/CamelCaseMotion"
