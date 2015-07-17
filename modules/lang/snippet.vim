@@ -1,5 +1,5 @@
 " NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
+" NeoBundle 'honza/vim-snippets'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1

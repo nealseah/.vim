@@ -13,6 +13,8 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'rstacruz/vim-ultisnips-css'
+NeoBundle 'bonsaiben/bootstrap-snippets'
+NeoBundle 'chrisgillis/vim-bootstrap3-snippets'
 
 " Template
 NeoBundle 'geechrist/vim-mustache-handlebars'
