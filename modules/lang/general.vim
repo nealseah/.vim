@@ -11,8 +11,13 @@
 NeoBundle 'AndrewRadev/splitjoin.vim'
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
-NeoBundle 'tomtom/tcomment_vim'
-let g:tcommentTextObjectInlineComment=''
+NeoBundle 'tpope/vim-commentary'
+xmap <leader>c gc
+nmap <leader>c gc
+omap <leader>c gc
+nmap <leader>/ gcc
+" NeoBundle 'tomtom/tcomment_vim'
+" let g:tcommentTextObjectInlineComment=''
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'Spaceghost/vim-matchit'
 NeoBundle 'scrooloose/syntastic'
