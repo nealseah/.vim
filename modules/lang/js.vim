@@ -17,8 +17,5 @@ NeoBundle 'claco/jasmine.vim'
 " NeoBundle 'BrunoGrasselli/jasmine-snippets'
 " NeoBundle 'vim-scripts/Jasmine-snippets-for-snipMate'
 
-"angular
-NeoBundle 'burnettk/vim-angular'
-"ionic
-" let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute \"ion-nav-bar']
 NeoBundle 'moll/vim-node'
+NeoBundle 'nyanhan/requirejs.vim'
