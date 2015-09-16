@@ -30,3 +30,7 @@ cno <c-e> <end>
 cno <c-a> <home>
 cno <c-d> <del>
 "}}}
+
+" switch from last window
+nn <leader>w <c-w><c-p>
+nn <leader>e <c-^>

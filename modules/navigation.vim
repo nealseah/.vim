@@ -34,12 +34,8 @@ let g:unite_enable_short_source_names = 1
 let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 10
 
-" call unite#filters#matcher_default#use(['matcher_fuzzy', 'matcher_hide_hidden_files'])
-" nn <C-p> :<C-u>Unite -start-insert -buffer-name=files buffer file_rec/async:!<cr>
-" nn <C-p> :<C-u>Unite -start-insert -buffer-name=file buffer file_rec/async:<cr>
-" nn <C-e> :<C-u>Unite -start-insert buffer<cr>
 nn <leader>o :<C-u>Unite -start-insert -buffer-name=file buffer file_rec/async:<cr>
-nn <leader>e :<C-u>Unite -start-insert buffer<cr>
+" nn <leader>e :<C-u>Unite -start-insert buffer<cr>
 nn <leader>m :<C-u>Unite -start-insert mapping<cr>
 NeoBundle 'Shougo/neomru.vim'
 nn <leader>n :<C-u>Unite -start-insert file_mru<cr>
