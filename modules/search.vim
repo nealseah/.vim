@@ -17,7 +17,7 @@ endif
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --ignore ".hg" --ignore ".svn" --ignore ".git" --column'
 let g:unite_source_grep_recursive_opt = ''
 
-nn <leader>/ :<C-u>Ags<SPACE>
+nn <leader>f :<C-u>Ags<SPACE>
 nn K :<C-u>Ags<cr>
 
 " Dash Searching"
