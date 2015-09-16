@@ -92,7 +92,13 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 " select the lines which were just pasted
-nnoremap vv `[V`]
+" nnoremap vv `[V`]
+" select text you just pasted
+noremap gV `[v`]
 
 NeoBundle 'MarcWeber/vim-addon-local-vimrc'
 let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
+
+NeoBundle 'terryma/vim-expand-region'
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
