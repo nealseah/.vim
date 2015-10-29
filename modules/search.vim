@@ -21,9 +21,9 @@ nn <leader>f :<C-u>Ags<SPACE>
 nn K :<C-u>Ags<cr>
 
 " Dash Searching"
-NeoBundle "rizzatti/funcoo.vim.git"
-NeoBundle "rizzatti/dash.vim.git"
-nm <F7> <Plug>DashSearch
+" NeoBundle "rizzatti/funcoo.vim.git"
+" NeoBundle "rizzatti/dash.vim.git"
+" nm <F7> <Plug>DashSearch
 
 NeoBundle 'haya14busa/incsearch.vim'
 nmap /  <Plug>(incsearch-forward)

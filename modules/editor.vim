@@ -26,22 +26,22 @@ NeoBundle 'drn/zoomwin-vim'
 NeoBundle "kana/vim-textobj-user"
 " f{char}
 NeoBundle "thinca/vim-textobj-between"
-" u
-"NeoBundle "beloglazov/vim-textobj-punctuation"
 " b
 NeoBundle "rhysd/vim-textobj-anyblock"
 " e
 NeoBundle "kana/vim-textobj-entire"
-" q
-NeoBundle "beloglazov/vim-textobj-quotes"
-" c
-" NeoBundle "coderifous/textobj-word-column.vim"
 " l
 NeoBundle "kana/vim-textobj-line"
-" _
-NeoBundle "lucapette/vim-textobj-underscore"
-" i
-NeoBundle "kana/vim-textobj-indent"
+" q
+" NeoBundle "beloglazov/vim-textobj-quotes"
+" u
+" NeoBundle "beloglazov/vim-textobj-punctuation"
+" " _
+" NeoBundle "lucapette/vim-textobj-underscore"
+" " i
+" NeoBundle "kana/vim-textobj-indent"
+" c
+" NeoBundle "coderifous/textobj-word-column.vim"
 " }}}
 
 " Disabling auto indent temporarily to paste
@@ -83,6 +83,8 @@ NeoBundle 'ntpeters/vim-better-whitespace'
 " " clean up trailing whitespace
 map <leader>l :StripWhitespace<cr>
 let g:better_whitespace_filetypes_blacklist = ['help', 'git', 'gitcommit', 'unite', 'vimfiler']
+" workaround for vimfiler
+autocmd FileType vimfiler match ExtraWhiteSpace ''
 
 " Bubbling lines
 NeoBundle 'tpope/vim-unimpaired'
