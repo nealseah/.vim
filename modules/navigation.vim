@@ -18,6 +18,8 @@ set wildignore+=package/
 set wildignore+=migration/
 set wildignore+=.min.js
 set wildignore+=.min.css
+set wildignore+=.bundle/
+set wildignore+=.tmp/
 
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
