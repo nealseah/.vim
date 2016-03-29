@@ -55,3 +55,6 @@ function! FilenameStatusLine()
         \  &ft == 'agse' ? '' :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]')
 endfunction
+
+" hide tilde(~) in vim
+autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg
