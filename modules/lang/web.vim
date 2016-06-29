@@ -22,3 +22,5 @@ NeoBundle 'mxw/vim-jsx'
 
 " ionic
 " let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute \"ion-nav-bar']
+
+NeoBundle 'posva/vim-vue'
