@@ -18,3 +18,4 @@ nn <leader>gb :Gblame<cr>
 nn <leader>gd :Gvdiff<cr>
 nn <leader>ga :Gwrite<cr>
 nn <leader>gc :Gcommit<cr>
+nn <leader>gl :Extradite<cr>
