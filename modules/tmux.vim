@@ -1,6 +1,8 @@
 autocmd BufNewFile,BufRead {.,}tmux*.conf set ft=tmux
-NeoBundle 'zaiste/tmux.vim'
+NeoBundle 'keith/tmux.vim'
 NeoBundle 'benmills/vimux'
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
+NeoBundle 'tmux-plugins/vim-tmux'
 " map <Leader>rp :VimuxPromptCommand<CR>
 " map <Leader>rl :VimuxRunLastCommand<CR>
 " map <LocalLeader>d :call VimuxRunCommand(@v, 0)<CR>
