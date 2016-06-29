@@ -20,11 +20,5 @@ NeoBundle 'groenewege/vim-less'
 " react
 NeoBundle 'mxw/vim-jsx'
 
-" Riot
-NeoBundle 'nicklasos/vim-jsx-riot'
-
-" angular
-NeoBundle 'burnettk/vim-angular'
-
 " ionic
 " let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute \"ion-nav-bar']
