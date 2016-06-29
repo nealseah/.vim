@@ -57,4 +57,4 @@ function! FilenameStatusLine()
 endfunction
 
 " hide tilde(~) in vim
-autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg
+autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
