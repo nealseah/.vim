@@ -1,6 +1,6 @@
 au BufNewFile,BufRead .jshintrc setl ft=json
 au BufNewFile,BufRead .eslintrc setl ft=json
-NeoBundle 'othree/yajs.vim'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'maksimr/vim-jsbeautify'
 
