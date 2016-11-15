@@ -1,25 +1,4 @@
-set wildignore+=.DS_Store
-set wildignore+=.git/
-set wildignore+=node_modules/
-set wildignore+=bower_components/
-set wildignore+=.bower-cache/
-set wildignore+=.bower-registry/
-set wildignore+=.sass-cache/
-set wildignore+=.vagrant/
-set wildignore+=vendor/
-set wildignore+=storage/
-set wildignore+=.png$
-set wildignore+=.jpg$
-set wildignore+=.ttf$
-set wildignore+=.woff$
-set wildignore+=.eot$
-set wildignore+=.svg$
-set wildignore+=package/
-set wildignore+=migration/
-set wildignore+=.min.js
-set wildignore+=.min.css
-set wildignore+=.bundle/
-set wildignore+=.tmp/
+NeoBundle 'sstallion/vim-wildignore'
 
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {

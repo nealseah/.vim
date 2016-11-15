@@ -1,0 +1,21 @@
+.DS_Store
+.git/
+
+" node
+node_modules/
+
+" images
+*.png
+*.gif
+*.jpg
+*.jpeg
+*.svg
+
+" fonts
+*.ttf
+*.woff
+*.eot
+
+" medias
+*.mp3
+*.mp4
