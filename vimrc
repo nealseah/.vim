@@ -1,51 +1,31 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
-
-if has('vim_starting')
- if &compatible
-   set nocompatible               " Be iMproved
- endif
-
- " Required:
- set runtimepath+=~/.vim/.bundle/neobundle.vim/
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/.bundle/'))
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin('~/.vim/dein')
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-ru! bundle.vim
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-call neobundle#end()
+" Add or remove your plugins here:
+" call dein#add('Shougo/neosnippet.vim')
+
+" Required:
+call dein#end()
 
 " Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
-call unite#custom#source('file_rec,file_rec/async,file_mru,file,buffer,grep', 'ignore_globs', split(&wildignore, ','))
-" call unite#custom#source('file_rec,file_rec/async,file_mru,file,buffer,grep', 'ignore_pattern', escape(substitute(join(split(&wildignore, ","), '\|'), '**/\?', "", "g"), '.'))
-call unite#custom#source('file_rec,file_rec/async,grep', 'max_candidates', 0)
-call unite#custom#source('buffer',
-      \ 'ignore_pattern', join([
-      \ 'vimfiler',
-      \ ], '\|'))
-
-" only match filename
-call unite#custom#source(
-      \ 'buffer, file, file_rec/async', 'matchers',
-      \ ['matcher_hide_hidden_files', 'matcher_fuzzy'])
-call unite#custom#source(
-      \ 'buffer, file, file_rec/async', 'converters',
-      \ ['converter_tail', 'converter_relative_word', 'converter_file_directory'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-
-colorscheme molokai
+"End dein Scripts-------------------------
