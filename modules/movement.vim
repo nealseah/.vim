@@ -6,7 +6,7 @@ nn k gk
 nn H ^
 nn L g_
 
-NeoBundle 'geechrist/directionalWindowResizer'
+call dein#add('geechrist/directionalWindowResizer')
 nn <silent> <down>  :call DownHorizontal()<CR>
 nn <silent> <up>    :call UpHorizontal()<CR>
 nn <silent> <right> :call RightVertical()<CR>

@@ -80,6 +80,7 @@ nnoremap <leader>o :<C-u>Denite file_rec buffer<cr>
 nnoremap <leader>f :<C-u>Denite grep<cr>
 
 
+ru! modules/movement.vim
 " Add or remove your plugins here:
 " call dein#add('Shougo/neosnippet.vim')
 
