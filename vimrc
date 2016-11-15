@@ -12,12 +12,16 @@ call dein#begin('~/.vim/dein')
 " Let dein manage dein
 " Required:
 call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/denite.nvim')
+
+let mapleader="\<Space>"
+set timeoutlen=400
+call dein#add('tpope/vim-sensible')
 
 " wildignore
 call dein#add('sstallion/vim-wildignore')
 
 " denite
+call dein#add('Shougo/denite.nvim')
 " Change file_rec command.
 call denite#custom#var('file_rec', 'command',
 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
