@@ -16,6 +16,7 @@ call dein#add('Shougo/dein.vim')
 ru! modules/editor.vim
 ru! modules/movement.vim
 ru! modules/files.vim
+ru! modules/search.vim
 ru! modules/git.vim
 
 " Required:
