@@ -41,6 +41,9 @@ nn <silent> <left>  :call LeftVertical()<CR>
 " switch from last window
 nn <leader>w <c-w><c-p>
 nn <leader>e <c-^>
+" tmux
+call dein#add('tmux-plugins/vim-tmux')
+call dein#add('tmux-plugins/vim-tmux-focus-events')
 " }}}
 
 " Text-object {{{
