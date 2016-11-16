@@ -1,12 +1,13 @@
-"UniteRequired
-NeoBundle 'ujihisa/unite-colorscheme'
-" NeoBundle 'Lokaltog/vim-distinguished'
-NeoBundle 'tomasr/molokai'
+" hide tilde(~) in vim
+autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
 
+" call dein#add('Lokaltog/vim-distinguished')
+call dein#add('tomasr/molokai')
 " let g:molokai_original = 1
 let g:rehash256 = 1
+colorscheme molokai
 
-NeoBundle "itchyny/lightline.vim"
+call dein#add("itchyny/lightline.vim")
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename', 'readonly', 'modified' ]],
@@ -55,6 +56,3 @@ function! FilenameStatusLine()
         \  &ft == 'agse' ? '' :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]')
 endfunction
-
-" hide tilde(~) in vim
-autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
