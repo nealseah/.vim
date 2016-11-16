@@ -58,6 +58,9 @@ call dein#add("rhysd/vim-textobj-anyblock")
 call dein#add("kana/vim-textobj-line")
 " }}}
 
+" Input Method
+call dein#add('ybian/smartim')
+
 " Selection {{{
 " select the lines which were just pasted
 " nnoremap vv `[V`]
@@ -68,32 +71,3 @@ call dein#add('terryma/vim-expand-region')
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
-
-" Format {{{
-call dein#add('editorconfig/editorconfig-vim')
-call dein#add('junegunn/vim-easy-align')
-" Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-set fdm=syntax
-" }}}
-
-" Trim {{{
-call dein#add('ntpeters/vim-better-whitespace')
-map <leader>l :StripWhitespace<cr>
-let g:better_whitespace_filetypes_blacklist = ['help', 'git', 'gitcommit', 'unite', 'vimfiler']
-" workaround for vimfiler
-autocmd FileType vimfiler match ExtraWhiteSpace ''
-" }}}
-
-" Input Method
-call dein#add('ybian/smartim')
-
-call dein#add('tpope/vim-repeat')
-call dein#add('tpope/vim-surround')
-call dein#add('tommcdo/vim-exchange')
-call dein#add('Raimondi/delimitMate')
-call dein#add('jmcantrell/vim-diffchanges')
-
-call dein#add('AndrewRadev/splitjoin.vim')
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
