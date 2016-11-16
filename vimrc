@@ -19,6 +19,7 @@ ru! modules/files.vim
 ru! modules/search.vim
 ru! modules/appearence.vim
 ru! modules/git.vim
+ru! modules/coding/*.vim
 
 " Required:
 call dein#end()

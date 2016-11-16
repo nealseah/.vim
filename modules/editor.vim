@@ -74,6 +74,7 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('junegunn/vim-easy-align')
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
+set fdm=syntax
 " }}}
 
 " Trim {{{
@@ -92,3 +93,7 @@ call dein#add('tpope/vim-surround')
 call dein#add('tommcdo/vim-exchange')
 call dein#add('Raimondi/delimitMate')
 call dein#add('jmcantrell/vim-diffchanges')
+
+call dein#add('AndrewRadev/splitjoin.vim')
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
