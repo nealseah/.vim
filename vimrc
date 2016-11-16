@@ -98,3 +98,5 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+autocmd! BufWritePost *.vim source %
