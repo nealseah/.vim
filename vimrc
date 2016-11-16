@@ -81,6 +81,7 @@ nnoremap <leader>f :<C-u>Denite grep<cr>
 
 
 ru! modules/movement.vim
+ru! modules/files.vim
 " Add or remove your plugins here:
 " call dein#add('Shougo/neosnippet.vim')
 
