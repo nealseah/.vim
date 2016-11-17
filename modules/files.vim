@@ -19,7 +19,7 @@ call denite#custom#map('insert', '<C-k>', 'move_to_prev_line')
 call denite#custom#source(
 \ 'file_mru', 'matchers', ['matcher_fuzzy', 'matcher_project_files'])
 call denite#custom#source(
-\ 'file_rec', 'matchers', ['matcher_cpsm'])
+\ 'file_rec', 'matchers', ['matcher_cpsm', 'matcher_ignore_globs'])
 
 " Add custom menus
 let s:menus = {}
