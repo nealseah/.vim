@@ -2,10 +2,11 @@
 autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
 
 " call dein#add('Lokaltog/vim-distinguished')
-call dein#add('tomasr/molokai')
-" let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
+" call dein#add('tomasr/molokai')
+" let g:rehash256 = 1
+" colorscheme molokai
+call dein#add('NLKNguyen/papercolor-theme')
+colorscheme PaperColor
 
 call dein#add("itchyny/lightline.vim")
 let g:lightline = {

@@ -5,13 +5,14 @@ nmap <leader>/ gcc
 
 " Folding {{{
 set foldlevelstart=1
+set nofoldenable
 " focus the current fold.
 nn <leader>z zMzvzz
 " }}}
 
 " Format {{{
 set fdm=syntax
-call dein#add('editorconfig/editorconfig-vim')
+" call dein#add('editorconfig/editorconfig-vim')
 call dein#add('junegunn/vim-easy-align')
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
@@ -40,3 +41,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_auto_jump = 2
 let g:syntastic_loc_list_height = 5
+
+call dein#add('SirVer/ultisnips')
+
+let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

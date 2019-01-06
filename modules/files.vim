@@ -1,3 +1,7 @@
+" encoding {{{
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+" }}}
+
 " netrw {{{
 let g:netrw_liststyle=1
 let g:netrw_sizestyle="H"
@@ -9,11 +13,21 @@ call dein#add('tpope/vim-vinegar')
 call dein#add('Shougo/denite.nvim')
 " Change file_rec command.
 call denite#custom#var('file_rec', 'command',
-\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+\ ['rg', '--files', '--glob', '!.git', ''])
 
 " Change mappings.
-call denite#custom#map('insert', '<C-j>', 'move_to_next_line')
-call denite#custom#map('insert', '<C-k>', 'move_to_prev_line')
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-j>',
+      \ '<denite:move_to_next_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-k>',
+      \ '<denite:move_to_previous_line>',
+      \ 'noremap'
+      \)
 
 " Change matchers.
 call denite#custom#source(
@@ -46,6 +60,7 @@ call denite#custom#var('menu', 'menus', s:menus)
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'default_opts',
 		\ ['--vimgrep', '--no-heading'])
@@ -61,6 +76,11 @@ call denite#custom#var('file_rec/git', 'command',
 " Change default prompt
 call denite#custom#option('default', 'prompt', '>')
 
-nnoremap <leader>o :<C-u>Denite file_rec buffer<cr>
+" Change ignore_globs
+call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
+      \ [ '.git/', '.ropeproject/', '__pycache__/',
+      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+
+nnoremap <leader>o :<C-u>Denite buffer file_rec<cr>
 nnoremap <leader>f :<C-u>Denite grep<cr>
 " }}}

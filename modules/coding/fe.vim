@@ -16,6 +16,7 @@ call dein#add('wavded/vim-stylus')
 au BufNewFile,BufRead .eslintrc setl ft=json
 call dein#add('othree/yajs.vim')
 call dein#add('pangloss/vim-javascript')
+au BufNewFile,BufRead .vue setl ft=javascript
 " }}}
 
 " Ops {{{

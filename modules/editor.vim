@@ -5,6 +5,8 @@ call dein#add('tpope/vim-sensible')
 " wildignore
 call dein#add('sstallion/vim-wildignore')
 
+" call dein#add('embear/vim-localvimrc')
+" let g:localvimrc_name = [".vimrc"]
 call dein#add('MarcWeber/vim-addon-local-vimrc')
 let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
 

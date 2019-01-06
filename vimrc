@@ -26,9 +26,9 @@ ru! modules/git.vim
 ru! modules/coding/*.vim
 
 " " If you want to install not installed plugins on startup.
-" if dein#check_install()
-"   call dein#install()
-" endif
+if dein#check_install()
+  call dein#install()
+endif
 " call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 "End dein Scripts-------------------------
