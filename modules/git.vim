@@ -1,9 +1,9 @@
-call dein#add('tpope/vim-fugitive')
-call dein#add('airblade/vim-gitgutter')
-let g:gitgutter_sign_column_always = 1
+Plug ('tpope/vim-fugitive')
+Plug ('airblade/vim-gitgutter')
+set signcolumn=yes
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-call dein#add('int3/vim-extradite')
+Plug ('int3/vim-extradite')
 
 nn <leader>gs :Gst<cr>
 nn <leader>gb :Gblame<cr>

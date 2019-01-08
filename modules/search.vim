@@ -10,12 +10,12 @@ set smartcase
 " clear search matching
 nm <leader><space> :noh<cr>:call clearmatches()<cr>
 
-" call dein#add('bronson/vim-visual-star-search')
-call dein#add('haya14busa/vim-asterisk')
+" Plug ('bronson/vim-visual-star-search')
+Plug ('haya14busa/vim-asterisk')
 map *  <Plug>(asterisk-z*)
 map #  <Plug>(asterisk-z#)
 
-call dein#add('haya14busa/incsearch.vim')
+Plug ('haya14busa/incsearch.vim')
 let g:incsearch#auto_nohlsearch = 1
 nmap /  <Plug>(incsearch-forward)
 nmap ?  <Plug>(incsearch-backward)
@@ -29,7 +29,7 @@ nmap g# <Plug>(incsearch-nohl-g#)
 " }}}
 
 " Global search {{{
-call dein#add('gabesoft/vim-ags')
-nn <leader>f :<C-u>Ags<SPACE>
-nn K :<C-u>Ags<cr>
+" Plug ('gabesoft/vim-ags')
+" nn <leader>f :<C-u>Ags<SPACE>
+" nn K :<C-u>Ags<cr>
 " }}}

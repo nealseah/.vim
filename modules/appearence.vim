@@ -1,14 +1,8 @@
 " hide tilde(~) in vim
 autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
 
-" call dein#add('Lokaltog/vim-distinguished')
-" call dein#add('tomasr/molokai')
-" let g:rehash256 = 1
-" colorscheme molokai
-call dein#add('NLKNguyen/papercolor-theme')
-colorscheme PaperColor
-
-call dein#add("itchyny/lightline.vim")
+Plug ('NLKNguyen/papercolor-theme')
+Plug ('itchyny/lightline.vim')
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename', 'readonly', 'modified' ]],
@@ -16,7 +10,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'filename': 'FilenameStatusLine',
-      \   'fugitive': 'MyFugitive'
+      \   'fugitive': 'GitSection'
       \ },
       \ 'mode_map': {
       \   'n' : 'N',
@@ -32,7 +26,7 @@ let g:lightline = {
       \   '?': '      ' }
       \}
 
-function! MyFugitive()
+function! GitSection()
   try
     if expand('%:t') !~? 'Tagbar' && &ft !~? 'vimfiler' && exists('*fugitive#head')
       let mark = 'BR:'  " edit here for cool mark
