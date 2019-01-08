@@ -1,12 +1,8 @@
-"UniteRequired
-NeoBundle 'ujihisa/unite-colorscheme'
-" NeoBundle 'Lokaltog/vim-distinguished'
-NeoBundle 'tomasr/molokai'
+" hide tilde(~) in vim
+autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
 
-" let g:molokai_original = 1
-let g:rehash256 = 1
-
-NeoBundle "itchyny/lightline.vim"
+Plug ('NLKNguyen/papercolor-theme')
+Plug ('itchyny/lightline.vim')
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename', 'readonly', 'modified' ]],
@@ -14,7 +10,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'filename': 'FilenameStatusLine',
-      \   'fugitive': 'MyFugitive'
+      \   'fugitive': 'GitSection'
       \ },
       \ 'mode_map': {
       \   'n' : 'N',
@@ -30,7 +26,7 @@ let g:lightline = {
       \   '?': '      ' }
       \}
 
-function! MyFugitive()
+function! GitSection()
   try
     if expand('%:t') !~? 'Tagbar' && &ft !~? 'vimfiler' && exists('*fugitive#head')
       let mark = 'BR:'  " edit here for cool mark
@@ -55,6 +51,3 @@ function! FilenameStatusLine()
         \  &ft == 'agse' ? '' :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]')
 endfunction
-
-" hide tilde(~) in vim
-autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg

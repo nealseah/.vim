@@ -1,106 +1,75 @@
-NeoBundle 'wincent/terminus'
+let mapleader="\<Space>"
+set timeoutlen=400
+Plug ('tpope/vim-sensible')
+
+" wildignore
+Plug ('sstallion/vim-wildignore')
+
+" Plug ('embear/vim-localvimrc')
+" let g:localvimrc_name = [".vimrc"]
+Plug ('MarcWeber/vim-addon-local-vimrc')
+let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
 
 nmap <leader>s :w<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>x ZZ
 
-" undo files
+set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+set cursorline
+
+" Yank
+nn Y y$
+
+" Undo files
 set undodir=~/.vim/.tmp/undo
 set undolevels=3000
 set undoreload=10000
 set undofile
 
-" backups
-set backupdir=~/.vim/.tmp/backup
+" Backups
 set nobackup
 
-" swap files
-set directory=~/.vim/.tmp/swap
+" Swap files
 set noswapfile
 
-set cursorline
-
-NeoBundle 'drn/zoomwin-vim'
-
-" text-object {{{
-NeoBundle "kana/vim-textobj-user"
-" f{char}
-NeoBundle "thinca/vim-textobj-between"
-" b
-NeoBundle "rhysd/vim-textobj-anyblock"
-" e
-NeoBundle "kana/vim-textobj-entire"
-" l
-NeoBundle "kana/vim-textobj-line"
-" q
-" NeoBundle "beloglazov/vim-textobj-quotes"
-" u
-" NeoBundle "beloglazov/vim-textobj-punctuation"
-" " _
-" NeoBundle "lucapette/vim-textobj-underscore"
-" " i
-" NeoBundle "kana/vim-textobj-indent"
-" c
-" NeoBundle "coderifous/textobj-word-column.vim"
+" Window {{{
+Plug ('wincent/terminus')
+Plug ('drn/zoomwin-vim')
+Plug ('geechrist/directionalWindowResizer')
+nn <silent> <down>  :call DownHorizontal()<CR>
+nn <silent> <up>    :call UpHorizontal()<CR>
+nn <silent> <right> :call RightVertical()<CR>
+nn <silent> <left>  :call LeftVertical()<CR>
+" switch from last window
+nn <leader>w <c-w><c-p>
+nn <leader>e <c-^>
+" tmux
+Plug ('tmux-plugins/vim-tmux')
+Plug ('tmux-plugins/vim-tmux-focus-events')
 " }}}
 
-" Disabling auto indent temporarily to paste
-" NeoBundle 'ConradIrwin/vim-bracketed-paste'
-
-" Format{{{
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'junegunn/vim-easy-align'
-" Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-"}}}
-
-" Start interactive EasyAlign with a Vim movement
-set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-
-" Yank
-nn Y y$
-"UniteRequired
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_history_yank_save_clipboard = 1
-let g:unite_source_history_yank_file=$HOME.'/.vim/.tmp/yankring'
-nn <leader>y :<C-u>Unite history/yank<CR>
-
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tommcdo/vim-exchange'
-NeoBundle 'Raimondi/delimitMate'
-" NeoBundle 'cohama/lexima.vim'
+" Text-object {{{
+Plug ('kana/vim-textobj-user')
+" e
+Plug ('kana/vim-textobj-entire')
+" f{char}
+Plug ('thinca/vim-textobj-between')
+" b
+Plug ('rhysd/vim-textobj-anyblock')
+" l
+Plug ('kana/vim-textobj-line')
+" }}}
 
 " Input Method
-NeoBundle 'ybian/smartim'
+Plug ('ybian/smartim')
 
-NeoBundle 'jmcantrell/vim-diffchanges'
-"NeoBundle 'vim-scripts/diffchar.vim'
-NeoBundle 'kshenoy/vim-signature'
-
-" Trim
-NeoBundle 'ntpeters/vim-better-whitespace'
-" " clean up trailing whitespace
-map <leader>l :StripWhitespace<cr>
-let g:better_whitespace_filetypes_blacklist = ['help', 'git', 'gitcommit', 'unite', 'vimfiler']
-" workaround for vimfiler
-autocmd FileType vimfiler match ExtraWhiteSpace ''
-
-" Bubbling lines
-NeoBundle 'tpope/vim-unimpaired'
-nmap <C-Up> [e
-nmap <C-Down> ]e
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
+" Selection {{{
 " select the lines which were just pasted
 " nnoremap vv `[V`]
 " select text you just pasted
 noremap gV `[v`]
 
-NeoBundle 'MarcWeber/vim-addon-local-vimrc'
-let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
-
-NeoBundle 'terryma/vim-expand-region'
+Plug ('terryma/vim-expand-region')
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+" }}}
