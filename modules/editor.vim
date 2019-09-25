@@ -40,6 +40,7 @@ nn <silent> <right> :call RightVertical()<CR>
 nn <silent> <left>  :call LeftVertical()<CR>
 " switch from last window
 nn <leader>w <c-w><c-p>
+" switch from last buffer
 nn <leader>e <c-^>
 " tmux
 Plug ('tmux-plugins/vim-tmux')
@@ -62,8 +63,6 @@ Plug ('kana/vim-textobj-line')
 Plug ('ybian/smartim')
 
 " Selection {{{
-" select the lines which were just pasted
-" nnoremap vv `[V`]
 " select text you just pasted
 noremap gV `[v`]
 
