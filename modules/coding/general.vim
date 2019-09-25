@@ -21,8 +21,6 @@ vmap <Enter> <Plug>(EasyAlign)
 Plug ('ntpeters/vim-better-whitespace')
 map <leader>l :StripWhitespace<cr>
 let g:better_whitespace_filetypes_blacklist = ['help', 'git', 'gitcommit', 'unite', 'vimfiler']
-" workaround for vimfiler
-autocmd FileType vimfiler match ExtraWhiteSpace ''
 " }}}
 
 Plug ('tpope/vim-repeat')
