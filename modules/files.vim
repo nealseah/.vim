@@ -5,7 +5,6 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 " netrw {{{
 let g:netrw_liststyle=1
 let g:netrw_sizestyle="H"
-nnoremap <leader>d :<C-u>Rex<cr>
 Plug ('tpope/vim-vinegar')
 " }}}
 
@@ -20,7 +19,6 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 nnoremap <leader>o :<C-u>Files<cr>
-nnoremap <leader>go :<C-u>Files<cr>
 nnoremap <leader>f :Rg<Cr>
 " nnoremap <leader>f :<C-u>Denite grep<cr>
 " }}}
