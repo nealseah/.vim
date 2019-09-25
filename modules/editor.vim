@@ -33,11 +33,8 @@ set noswapfile
 " Window {{{
 Plug ('wincent/terminus')
 Plug ('drn/zoomwin-vim')
-Plug ('geechrist/directionalWindowResizer')
-nn <silent> <down>  :call DownHorizontal()<CR>
-nn <silent> <up>    :call UpHorizontal()<CR>
-nn <silent> <right> :call RightVertical()<CR>
-nn <silent> <left>  :call LeftVertical()<CR>
+" resize & move windows
+Plug ('simeji/winresizer')
 " switch from last window
 nn <leader>w <c-w><c-p>
 " switch from last buffer
