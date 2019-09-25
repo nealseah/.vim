@@ -5,8 +5,6 @@ Plug ('tpope/vim-sensible')
 " wildignore
 Plug ('sstallion/vim-wildignore')
 
-" Plug ('embear/vim-localvimrc')
-" let g:localvimrc_name = [".vimrc"]
 Plug ('MarcWeber/vim-addon-local-vimrc')
 let g:local_vimrc = {'names':['.vimrc'],'hash_fun':'LVRHashOfFile'}
 
