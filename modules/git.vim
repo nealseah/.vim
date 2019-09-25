@@ -5,8 +5,13 @@ let g:gitgutter_eager = 0
 set updatetime=100
 set signcolumn=yes
 
-nn <leader>gs :Gst<cr>
+nn <leader>gs :G<cr>
 nn <leader>gb :Gblame<cr>
 nn <leader>gd :Gvdiff<cr>
 nn <leader>ga :Gwrite<cr>
 nn <leader>gc :Gcommit<cr>
+nn <leader>gl :Glog<cr>
+"browse file in the browser @github
+nn <leader>gh :Gbrowse<cr>
+
+Plug ('tpope/vim-rhubarb')
