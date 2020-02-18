@@ -16,8 +16,7 @@ let g:lightline = {
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
-      \   'filename': 'FilenameStatusLine',
-      \   'fugitive': 'GitSection'
+      \   'fugitive': 'FugitiveHead'
       \ },
       \ 'mode_map': {
       \   'n' : 'N',
@@ -32,29 +31,3 @@ let g:lightline = {
       \   "\<C-s>": 'S-BLOCK',
       \   '?': '      ' }
       \}
-
-function! GitSection()
-  try
-    if expand('%:t') !~? 'Tagbar' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = 'BR:'  " edit here for cool mark
-      let _ = fugitive#head()
-      return strlen(_) ? mark._ : ''
-    endif
-  catch
-  endtry
-  return ''
-endfunction
-
-function! ReadonlyStatusLine()
-    return &readonly ? '⭤' : ''
-endfunction
-
-function! FilenameStatusLine()
-  return ('' != ReadonlyStatusLine() ? ReadonlyStatusLine() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \  &ft == 'agsv' ? ags#get_status_string() :
-        \  &ft == 'agse' ? '' :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]')
-endfunction
