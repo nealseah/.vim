@@ -1,7 +1,14 @@
 " hide tilde(~) in vim
-autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
+" autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
 
 Plug ('NLKNguyen/papercolor-theme')
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.dark': {
+  \       'transparent_background': 1
+  \     }
+  \   }
+  \ }
 Plug ('itchyny/lightline.vim')
 let g:lightline = {
       \ 'active': {
