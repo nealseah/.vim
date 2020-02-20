@@ -9,7 +9,7 @@ ru! modules/files.vim
 ru! modules/search.vim
 ru! modules/appearence.vim
 ru! modules/git.vim
-ru! modules/coding/*.vim
+ru! modules/coding/active/*.vim
 call plug#end()
 
 colorscheme PaperColor
