@@ -8,15 +8,8 @@ let g:netrw_sizestyle="H"
 Plug ('tpope/vim-vinegar')
 " }}}
 
-" fzf {{{
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-nnoremap <leader>o :<C-u>Files<cr>
-nnoremap <leader>f :Rg<Cr>
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_ShortcutF = '<leader>o'
+nnoremap <leader>f :Leaderf rg<Cr>
