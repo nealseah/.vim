@@ -1,6 +1,3 @@
-" hide tilde(~) in vim
-" autocmd BufNewFile,BufRead * highlight NonText ctermfg=bg guifg=bg
-
 Plug ('NLKNguyen/papercolor-theme')
 let g:PaperColor_Theme_Options = {
   \   'theme': {
@@ -13,7 +10,7 @@ Plug ('itchyny/lightline.vim')
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename', 'readonly', 'modified' ]],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \   'right': [ [ 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'FugitiveHead'

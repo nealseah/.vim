@@ -37,12 +37,3 @@ Plug ('tpope/vim-surround')
 Plug ('tpope/vim-unimpaired')
 Plug ('tommcdo/vim-exchange')
 Plug ('Raimondi/delimitMate')
-
-Plug ('SirVer/ultisnips')
-let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"

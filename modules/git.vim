@@ -11,7 +11,7 @@ nn <leader>gd :Gvdiff<cr>
 nn <leader>ga :Gwrite<cr>
 nn <leader>gc :Gcommit<cr>
 nn <leader>gl :Glog<cr>
-"browse file in the browser @github
-nn <leader>gh :Gbrowse<cr>
 
+"browse file in the browser @github
 Plug ('tpope/vim-rhubarb')
+nn <leader>gh :Gbrowse<cr>
