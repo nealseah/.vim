@@ -36,7 +36,9 @@ Plug ('drn/zoomwin-vim')
 " resize & move windows
 Plug ('simeji/winresizer')
 " switch from last window
-nn <leader>w <c-w><c-p>
+nn <leader>ww <c-w><c-p>
+nn <leader>wv <c-w><c-v>
+nn <leader>wh <c-w><c-s>
 " switch from last buffer
 nn <leader>e <c-^>
 " tmux
