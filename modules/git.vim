@@ -4,7 +4,8 @@ let g:gitgutter_preview_win_floating = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 set updatetime=100
-set signcolumn=yes
+set number
+set signcolumn=number
 
 nn <leader>gs :G<cr>
 nn <leader>gb :Gblame<cr>
