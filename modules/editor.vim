@@ -17,6 +17,7 @@ set cursorline
 
 " Yank
 nn Y y$
+Plug ('junegunn/vim-peekaboo')
 
 " Undo files
 set undodir=~/.vim/.tmp/undo
