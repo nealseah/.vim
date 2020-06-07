@@ -15,9 +15,12 @@ nmap <leader>x ZZ
 set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 set cursorline
 
-" Yank
+" Yank {{{
 nn Y y$
-Plug ('junegunn/vim-peekaboo')
+" require coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <space>cy  :<C-u>CocCommand yank.clean<cr>
+" }}}
 
 " Undo files
 set undodir=~/.vim/.tmp/undo
