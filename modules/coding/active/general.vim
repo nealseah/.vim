@@ -1,10 +1,5 @@
 " Syntax {{{
 Plug ('sheerun/vim-polyglot')
-Plug ('scrooloose/syntastic')
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_auto_jump = 2
-let g:syntastic_loc_list_height = 5
 " }}}
 
 " Comment {{{
@@ -19,7 +14,7 @@ set nofoldenable
 
 " Format {{{
 set fdm=syntax
-" Plug ('editorconfig/editorconfig-vim')
+Plug ('editorconfig/editorconfig-vim')
 Plug ('junegunn/vim-easy-align')
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
