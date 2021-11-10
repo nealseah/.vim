@@ -22,6 +22,13 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nnoremap <silent> <space>cy  :<C-u>CocCommand yank.clean<cr>
 " }}}
 
+" Substitute {{{
+" Plug ('svermeulen/vim-subversive')
+" nmap <leader>s <plug>(SubversiveSubstituteRange)
+" xmap <leader>s <plug>(SubversiveSubstituteRange)
+" nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
+" }}}
+
 " Undo files
 set undodir=~/.vim/.tmp/undo
 set undolevels=3000
