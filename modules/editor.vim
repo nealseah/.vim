@@ -1,6 +1,7 @@
 let mapleader="\<Space>"
 set timeoutlen=400
 Plug ('tpope/vim-sensible')
+set number
 
 " wildignore
 Plug ('sstallion/vim-wildignore')

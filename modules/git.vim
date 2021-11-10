@@ -4,8 +4,6 @@ let g:gitgutter_preview_win_floating = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 set updatetime=100
-set number
-set relativenumber
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
