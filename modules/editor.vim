@@ -72,6 +72,7 @@ Plug ('kana/vim-textobj-line')
 
 " Input Method
 Plug ('ybian/smartim')
+let g:smartim_default = 'com.apple.keylayout.ABC'
 
 " Selection {{{
 " select text you just pasted
