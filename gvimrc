@@ -5,3 +5,12 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 set lines=999 columns=9999
+
+let g:Lf_DevIconsFont = "DroidSansMono Nerd Font Mono"
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'transparent_background': 0
+  \     }
+  \   }
+  \ }

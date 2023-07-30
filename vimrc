@@ -12,4 +12,6 @@ ru! modules/git.vim
 ru! modules/coding/active/*.vim
 call plug#end()
 
+set termguicolors
+set background=dark
 colorscheme PaperColor
